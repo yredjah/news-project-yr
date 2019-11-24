@@ -1,0 +1,23 @@
+.title-body {
+  font-size: 30px;
+}
+
+.articles-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#cards {
+  box-shadow: 15px 10px 5px lightgrey;
+
+  @media screen and (max-width: 1000px) {
+    width: 70%;
+    height: 80%;
+    margin-bottom: 10%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
