@@ -35,6 +35,7 @@ const Filter = ({
           onChange={changeHandler}
           value={searchByKeyWord}
           placeholder='Mot clé' 
+          name='searchByKeyWord'
           id='form-subcomponent-shorthand-input-key'
           />
         </Form.Field>
@@ -44,15 +45,18 @@ const Filter = ({
           placeholder='Pays' 
           onChange={changeHandler}
           value={searchByContry}
+          name='searchByContry'
           id='form-subcomponent-shorthand-input-contry'
           />
         </Form.Field>
         <Form.Field>
           <label>Date</label>
           <input 
+          type="date"
           placeholder='Date' 
           onChange={changeHandler}
           value={searchByDate}
+          name='searchByDate'
           id='form-subcomponent-shorthand-input-date'
           />
         </Form.Field>
