@@ -2,7 +2,7 @@
 import React from 'react';
 
 import Header from 'src/components/Header';
-import Body from 'src/components/Body';
+import Body from 'src/containers/Body';
 import Footer from 'src/components/Footer';
 import Filter from 'src/containers/Filter';
 

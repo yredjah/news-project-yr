@@ -1,5 +1,8 @@
 // == Initial State
 const initialState = {
+
+  articles: [], 
+
   searchByKeyWord: '',
   searchByContry: '',
   searchByDate: '',
@@ -8,6 +11,7 @@ const initialState = {
 // == Types
 export const ON_SUBMIT_SEARCH = 'ON_SUBMIT_SEARCH';
 const ON_INPUT_CHANGE = 'ON_INPUT_CHANGE';
+const ON_SET_ARTICLE = 'ON_SET_ARTICLE';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -16,6 +20,12 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.value,
+      };
+
+    case ON_SET_ARTICLE:
+      return {
+        ...state,
+        articles: action.articles, 
       };
 
     default:
@@ -33,6 +43,11 @@ export const onInputChange = (name, value) => ({
 export const onSubmitSearch = () => ({
   type: ON_SUBMIT_SEARCH,
 });
+
+export const setArticle = articles => ({
+  type: ON_SET_ARTICLE,
+  articles, 
+}); 
 
 
 // == Selectors
